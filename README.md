@@ -1,0 +1,15 @@
+# Spokes_Callosetal_ProfileCode
+
+This repository contains code and output for generating profiles of spoke activity from Callos et al. 2025 (PSJ 6:17, DOI: [10.3847/PSJ/ad9583](http://doi.org/10.3847/PSJ/ad9583)). 
+
+The Jupyter Notebook `Spokiness_Processing_Code_public.ipynb` contains a program that reads a set of IDL save files (`*.sav`) containing maps of the B ring that is then run on multiple sets of Cassini ISS images to produce profiles of the spoke activity and the background ring brightness that are plotted in Figures 10-12 of the paper. This code includes the explicit parameters for each observation. 
+
+Note that the maps of the B ring are not included here, but they can be reconstructed from the FITS files and their PDS4 labels archived at the [Ring-Moon Systems Node](https://pds-rings.seti.org/) of the PDS, which are expected to be made available in the near future at https://pds-rings.seti.org/pds4/bundles/cassini_iss_spokes_hedman-hamilton-2025.
+
+This repository also contains subdirectories of the outputs from the program:
+  - `Profiles/` contains files ending in `_sigprofs.txt` and `_backprofs.txt` that contain profiles of $s(r)$ and $I \over F_b(r)$ for each individual image in a selected observation (indicated by the first part of the filename) that can be used to generate profiles like that shown in Figure 10 of the paper. For each of these files, the first column gives the ring radius, and the subsequent columns give the relevant parameter for each of the different profiles. The number of columns is determined by the number of images in the selected observation.
+  - `Signals/` and `Backgrounds/` contain files that provide summary profiles for each observation indicated by the start of the relevant filename, which can be used to generate the profiles shown in Figures 11 and 12 of the paper.
+    - The files in `Backgrounds/` each just have two columns, which are the radius and mean $I \over F_b$ values for the relevant observation.
+    - The files in `Signals/` have four columns: the first column gives the observed radius; the second column is the difference between the average and minimum value of the spoke signal $s$ at that radius, which can be used to compute the average normalized spoke signal (the $\bar{n}$ parameter); the third column is the difference between the maximum and minimum value of the spoke signal $s$ at that radius (which was not used in the paper); and the fourth column is the average value of the spoke signal $s$ at that radius, which can be used to compute the average normalized spoke signal ($\bar{n}$).
+
+
