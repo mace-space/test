@@ -2,7 +2,7 @@
 
 This repository contains code and output for generating profiles of spoke activity from Callos et al. 2025 (PSJ 6:17, DOI: [10.3847/PSJ/ad9583](http://doi.org/10.3847/PSJ/ad9583)). 
 
-The Jupyter Notebook `Spokiness_Processing_Code_public.ipynb` contains a program that reads a set of IDL save files (`*.sav`) containing maps of the B ring that is then run on multiple sets of Cassini ISS images to produce profiles of the spoke activity and the background ring brightness that are plotted in Figures 10-12 of the paper. This code includes the explicit parameters for each observation. 
+The Jupyter Notebook `Spokiness_Processing_Code_public.ipynb` contains a program that reads a set of IDL save files (`*.sav`) containing maps of the B ring that is then run on multiple sets of reprojected Cassini ISS images to produce profiles of the spoke activity and the background ring brightness that are plotted in Figures 10-12 of the paper. This code includes the explicit parameters for each observation. 
 
 Note that the maps of the B ring are not included here, but they can be reconstructed from the FITS files and their PDS4 labels archived at the [Ring-Moon Systems Node](https://pds-rings.seti.org/) of the PDS, which are expected to be made available in the near future at https://pds-rings.seti.org/pds4/bundles/cassini_iss_spokes_hedman-hamilton-2025.
 
